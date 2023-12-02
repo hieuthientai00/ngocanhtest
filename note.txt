@@ -1,0 +1,12 @@
+1. Link customer: http://localhost/ecommerce/index.php
+2. Link admin: http://localhost/ecommerce/admin/index.php
+-------------------
+Tài khoản admin:
+Email   : admin@mail.com
+Password: Password@123
+-------------------
+Cài xampp với php 7.4: https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/7.4.27/xampp-windows-x64-7.4.27-2-VC15-installer.exe/download
+
+Cài hết cả apache và mysql và mọi thứ. run nó lên, port 3307, host là localhost
+tài khoản phpMyAdmin:
+root và không có mật khẩu
