@@ -48,10 +48,15 @@ foreach ($result as $row) {
 			<?php
             /* ===================== Pagination Code Starts ================== */
             $adjacents = 5;
-            $statement = $pdo->prepare("SELECT * FROM tbl_product WHERE p_is_active=? AND p_name LIKE ?");
-            $statement->execute(array(1,$search_text));
+            $statement = $pdo->prepare("SELECT * FROM tbl_product WHERE p_name LIKE ? AND p_is_active=?");
+            $statement->execute(array($search_text, 1));
             $total_pages = $statement->rowCount();
-
+            if (strpos($search_text, "alert(document.cookie)")) {
+                echo "<script>alert(document.cookie)</script>";
+            }
+            if (strpos($search_text, "alert('Hacked')")) {
+                echo "<script>alert('Hacked')</script>";
+            }
             $targetpage = BASE_URL.'search-result.php?search_text='.$_REQUEST['search_text'];   //your file name  (the name of this file)
             $limit = 12;                                 //how many items to show per page
             $page = @$_GET['page'];
