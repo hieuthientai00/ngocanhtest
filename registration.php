@@ -144,11 +144,11 @@ if (isset($_POST['form1'])) {
                                         '',
                                         '',
                                         '',
-                                        md5($_POST['cust_password']),
+                                        $_POST['cust_password'],
                                         $token,
                                         $cust_datetime,
                                         $cust_timestamp,
-                                        0
+                                        1
                                     ));
 
         // Send email for confirmation of the account

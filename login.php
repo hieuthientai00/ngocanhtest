@@ -31,8 +31,7 @@ if(isset($_POST['form1'])) {
         if($total==0) {
             $error_message .= LANG_VALUE_133.'<br>';
         } else {
-            //using MD5 form
-            if( $row_password != md5($cust_password) ) {
+            if( $row_password != $cust_password ) {
                 $error_message .= LANG_VALUE_139.'<br>';
             } else {
                 if($cust_status == 0) {

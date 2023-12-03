@@ -4,7 +4,7 @@ session_start();
 include("inc/config.php");
 include("inc/functions.php");
 include("inc/CSRF_Protect.php");
-// $csrf = new CSRF_Protect();
+$csrf = new CSRF_Protect();
 $error_message='';
 
 $pdo = new PDO('mysql:host=localhost:3307;dbname=ecommerceweb', 'root', '');
@@ -80,7 +80,7 @@ if(isset($_POST['form1'])) {
 	    ?>
 
 		<form action="" method="post">
-			<!-- <?php $csrf->echoInputField(); ?> -->
+			<?php $csrf->echoInputField(); ?>
 			<div class="form-group has-feedback">
 				<input class="form-control" placeholder="Email address" name="email" type="email" autocomplete="off" autofocus>
 			</div>
